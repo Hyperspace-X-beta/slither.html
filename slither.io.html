@@ -1,0 +1,438 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>slither.io</title>
+  <meta name="viewport" content="minimal-ui, user-scalable=no, initial-scale=0.7, maximum-scale=0.7, width=device-width">
+ 	<meta name="description" content="The smash-hit game! Play with millions of players around the world and try to become the longest of the day!">
+ 	<meta property="og:description" content="The smash-hit game! Play with millions of players around the world and try to become the longest of the day!">
+  <meta name="keywords" content="slitherio, slither, io, snake, snakes, worm, worms, game, games, web game, html5, fun, flash, slithario">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="slither.io">
+  <meta property="og:url" content="http://slither.io/">
+  <meta property="og:site_name" content="slither.io">
+  <meta property="og:image" content="http://slither.io/s/fbthumb3.jpg">
+  <link rel="image_src" href="http://slither.io/s/fbthumb3.jpg">
+  <link rel="icon" href="http://slither.io/s/favicon.png">
+
+  <style type="text/css">
+  
+  input.sumsginp:focus {
+   outline: none;
+   background: none !important;
+  }
+  
+  .sumsginp {
+   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+   font-size: 15px;
+   word-wrap: break-word;
+   color: #e0e0ff;
+   background: none;
+   resize: none;
+   border: 0px;
+   height: 23px;
+   opacity: 1;
+   position: absolute;
+   left: 12px;
+   top: 10px;
+   vertical-align: middle;
+   display: inline-block;
+  }
+  
+  .taho {
+   position: relative;
+   height: 43px;
+   border-radius: 29px;
+   border: 2px solid rgba(0, 0, 0, 1);
+   overflow: hidden;
+   display: inline-block;
+  }
+  
+  input[id="nick"]::-webkit-input-placeholder {
+    color: #7070B0;
+    opacity:  1;
+  }
+  input[id="nick"]:-moz-placeholder {
+    color: #7070B0;
+    opacity:  1;
+  }
+  input[id="nick"]::-moz-placeholder {
+    color: #7070B0;
+    opacity:  1;
+  }
+  input[id="nick"]:-ms-input-placeholder {
+    color: #7070B0;
+    opacity:  1;
+  }
+
+  
+  input[id="victory"]::-webkit-input-placeholder {
+    color: #80C8FF;
+    opacity:  1;
+  }
+  input[id="victory"]:-moz-placeholder {
+    color: #80C8FF;
+    opacity:  1;
+  }
+  input[id="victory"]::-moz-placeholder {
+    color: #80C8FF;
+    opacity:  1;
+  }
+  input[id="victory"]:-ms-input-placeholder {
+    color: #80C8FF;
+    opacity:  1;
+  }
+  
+  .nsi {
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+  }
+  
+  .btnt {
+   outline:none;
+  }
+  
+  .shbtn { background: #e9b032; text-decoration: none; } .shbtn:link { background: #e9b032; text-decoration: none; } .shbtn:visited { background: #e9b032; text-decoration: none; } .shbtn:hover { background: #ffce63; text-decoration: none; } .shbtn:active { background: #c48700; text-decoration: none; }
+  
+  
+  .btn:link {
+   opacity: .7;
+   text-decoration: none;
+  }
+  .btn:visited {
+   opacity: .7;
+   text-decoration: none;
+  }
+  .btn:hover {
+   opacity: 1;
+   text-decoration: none;
+  }
+  .btn:active {
+   opacity: .5;
+   text-decoration: none;
+  }
+  
+
+  
+  
+  .btn_disabled:link {
+   opacity: .7;
+   text-decoration: none;
+   cursor: default;
+  }
+  .btn_disabled:visited {
+   opacity: .7;
+   text-decoration: none;
+   cursor: default;
+  }
+  .btn_disabled:hover {
+   opacity: .7;
+   text-decoration: none;
+   cursor: default;
+  }
+  .btn_disabled:active {
+   opacity: .7;
+   text-decoration: none;
+   cursor: default;
+  }
+  
+  
+  
+  
+  
+  .lq:link {
+   opacity: .8;
+   color: #80FF80;
+  }
+  .lq:visited {
+   opacity: .8;
+   color: #80FF80;
+  }
+  .lq:hover {
+   opacity: 1;
+   color: #80FF80;
+  }
+  .lq:active {
+   opacity: .5;
+   color: #80FF80;
+  }
+  
+  
+  .lq2:link {
+   opacity: .8;
+   color: #8058D0;
+   text-decoration: none;
+  }
+  .lq2:visited {
+   opacity: .8;
+   color: #8058D0;
+   text-decoration: none;
+  }
+  .lq2:hover {
+   opacity: 1;
+   color: #8058D0;
+   text-decoration: underline;
+  }
+  .lq2:active {
+   opacity: .5;
+   color: #8058D0;
+   text-decoration: underline;
+  }
+  
+  
+  </style>
+	<style type="text/css">.sadg1 { background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAA4CAYAAADXVynvAAAA40lEQVQYV33Ka0vCABTG8falXBe7WGlWdtl0ZpIaJSXWttStOduyhUgoEpKIFIqSXZx+xwqeMwZ70Xn14/8cJj6zfub+jvkHwvQBPy5sp9hVTLGJg+97lOiXSfgk8B8GCj++A7j3CnA40gnDMnAw0ID9vgrsvSmE1xIQ6RWB3W4B2OnIwPaLBITbIrD1fAWEWnkg2MwRGpfA5tMFsFHPAuu1cyDweAasWafAajUDrJhpgpEClisngF9PAkvaMeE2ASyqRwSFsFCMo8wXBMJNzANWjqKwEu+BT6TiEzlMLq6dQvgFJPZ8+c2x5GAAAAAASUVORK5CYII=); }  .sadu1 { background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAA4CAYAAADXVynvAAAA70lEQVQYV33K2UqCUQBFYX07MyujLKxIScMsK8t6g8pMipAiEAkRRCLTSkSaB0UkMcwhJAgikCACkQgKkZOwfm8E3Vcfiy1fFs9C1pi8I4p8lkShBTaRp9hEDiyKJ7Agsk08Ams9A+ZraTD39wBmf1PA8pMEM98JMF29B+bKLZj6ugamz0sw+XEOjOUYMLxHwcRbBOhfj4HuJQTGS0EwVjwAo7kAGMn6gTbjA8NpLxhK7QNN0gMG424wcLcH+m92gfpqB/RduEDv2baE2BboiW4CVcQJuk83gPLEISG8DrpCdglHa0ARXG3F4YpU2uIfxzShrYvPXSYAAAAASUVORK5CYII=); }  .sadd1 { background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAA4CAYAAADXVynvAAAAv0lEQVQYV3XK2Y6CUBBFUU3EyywCoiAICIjzPHb//3fZnewrDxrraWWfandE99n6v/YnlNekCMGPor6jq6lMDYSuUYShA9VsYFA0ywS6bQHDsSX6PWC6DrA8F9i+B3qBD5zhAPTDALjRCHhxCPwkAoM0BkGWgGGeglGRgbDMQTQrwLguQbyoQLKswWQ9B+lmAbLtUmK/AvlhA6bHLShOO1Ce9xIXiep6oFS3I5jdT2+oH2dK/biA+c8Hfq9y+oo/vapKmv5EPdsAAAAASUVORK5CYII=); }</style><style type="text/css">.sadg2 { background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAA4CAYAAADXVynvAAAA30lEQVQYV3XJ2UqCYRSF4byftEwthxzS6jxnJTUsVIyUJkr9R0URJSRCRCQiJEQkFDEKraxuzIK1Pw+i1tHDuxTb8tds4WeKv/CJa0ua44MVBnGKsim+E4Q3Av8KOPgJgRsD9twLIfsMbGSeCJcjwHYxBKznA8JZH7CcPgLmkx7huAuspzuAKfVAOGoDxsN7wJC8A/SJW0K8BazFmsDqQQPQ7dcJ0RtAu3cNaCI1QvgKWAlVAfVuhRAsA8uBEsFfBJZ8BYY8oPLKBI8EKN0ig0Bw8cCik2PI/cZOlsq/+AYmU33zJURswAAAAABJRU5ErkJggg==); }  .sadu2 { background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAA4CAYAAADXVynvAAAA70lEQVQYV33NbSuDARjFcft2MxuTIQ9tMsI8DPf2DTCmSSIlSUpaZmZr3W0eN1pra5qxJaWWWkpKkqK1NvW/vFlxXv06nToaZ6FabfiJ5j/kZeO4q4dyK42SE0zfCKayv7gWTGYqfNnTZTCR+gbjyS8wlvgEo1cfwBZ/ByMXb2D47BUMnbyAwegzGFBLwBp+Av2hIugLPAKL/wGYffeg15sHPXs50L2bBV07GdC5nQYdW0nQvpkApo1L0LYeA61r58C4egpaVo5B83JEsKQCgycM9Ish0OQOAt3CkWD+EDS6/IK5A6Cd9dVjZl+aP1EDvcyhrZgi3aAAAAAASUVORK5CYII=); }  .sadd2 { background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAA4CAYAAADXVynvAAAAvklEQVQYV3XK2W6CABRFUU1kngehIAgCglo11qGt+v/fpSYbqsH0Pq3sc4cjQboNHjd8h9BNT4gyz0IHUVQootRCklWKJGtAVvQeFNWgqJoJNN1uYThAN11gWB4wbR9YTgBsNwSOFwHXj4E3ToAfpGAcZiCIchDGM/AxKUGUVCBOazCZNiDJliDNV2BarEFWbkBebVvMd2BWf4Gi3oOyOYBqcWyxPIH56rvDD6g/f3to1mfKHxabC+UF1678hzsL10mR5BxtXwAAAABJRU5ErkJggg==); }</style></head>
+
+
+
+
+ <body style="background: #161c22;">
+
+
+
+<div id="nbg" style="position: fixed; left: 0px; top: 0px;">
+</div>
+
+
+<div id="login" style="position: fixed; left: 0px; top: 0px; width: 1280px; height: 100%; z-index: 20; margin-top: 64px;">
+  <div id="logo" style="margin-left: auto; margin-right: auto; text-align: center; width: 450px; height: 115px; margin-top: 50px;">
+   <div style="position: absolute; z-index: 999999;" id="logoih">
+    
+   </div>
+  <div style="width: 450px; height: 115px;"><canvas width="900" height="270" style="transform: scale(0.5); transform-origin: 0% 0% 0px; opacity: 1;"></canvas></div></div>
+  
+  <div id="lastscore" style="margin-left: auto; margin-right: auto; text-align: center; margin-top: 44px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 15px; color: #FFFFFF;">
+   &nbsp;
+  </div>
+  
+  <div id="tips" class="nsi" style="margin-left: auto; margin-right: auto; width: 360px; height: 30px; color: rgb(128, 104, 192); text-align: center; font-size: 14px; font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; opacity: 0.82638;">When longer, hold the mouse for a speed boost!</div>
+  
+  <div style="margin-left: auto; margin-right: auto; text-align: center;">
+   <div class="taho" id="nick_holder" style="width: 244px; margin-top: 34px; background: rgb(76, 68, 124); box-shadow: rgb(0, 0, 0) 0px 6px 50px; opacity: 1;">
+    <input class="sumsginp" id="nick" style="width: 220px; height: 24px;" placeholder="Nickname" maxlength="24">
+   </div>
+   <div id="victory_holder" style="display: none; font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; font-size: 18px; color: #FFFFFF; margin-top: 22px;">
+    <div style="font-size: 24px; margin-top: 12px;"><b>You are the new champion!</b></div>
+    <div style="opacity: .6; margin-top: 12px;">Enter a victory message that you would like all other players to see!</div>
+    <div class="taho" id="victory_bg" style="width: 444px; margin-top: 50px; background: #00A4CF; box-shadow: 0px 0px 50px rgba(64,64,255,1);">
+     <input class="sumsginp" id="victory" style="width: 420px; height: 24px; color:#FFFFFF;" placeholder="Your message" maxlength="140">
+    </div>
+   </div>
+  </div>
+  
+  <div id="playh" style="margin-left: auto; margin-right: auto; text-align: center; opacity: 1;"><div class="btnt nsi sadg1" style="position: relative; width: 87px; color: rgb(255, 255, 255); font-weight: bold; text-align: center; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 20px; cursor: pointer; height: 47px; line-height: 47px; box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 20px; border-radius: 34px; display: inline-block; margin-top: 20px; margin-bottom: 50px;"><div style="position: absolute; opacity: 1; left: 0px; top: 0px;"><div style="position: absolute; top: 0px; left: 0px; width: 87px; height: 47px; border-radius: 35px; opacity: 0;" class="sadu1"></div><div style="position: absolute; top: -1px; left: -1px; width: 89px; height: 49px; border-radius: 34px; opacity: 0;" class="sadd1"></div><div style="position: absolute; top: 0px; left: 0px; width: 87px; height: 47px; border-radius: 34px; color: rgb(255, 255, 255); opacity: 0.9;" class="nsi">&nbsp;Play&nbsp;</div></div></div></div>
+  <div id="saveh" style="margin-left: auto; margin-right: auto; text-align: center; display: none;"><div class="btnt nsi sadg2" style="position: relative; width: 183px; color: rgb(255, 255, 255); font-weight: bold; text-align: center; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 20px; cursor: pointer; height: 47px; line-height: 47px; box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 20px; border-radius: 34px; display: inline-block; margin-top: 30px; margin-bottom: 50px;"><div style="position: absolute; opacity: 1; left: 0px; top: 0px;"><div style="position: absolute; top: 0px; left: 0px; width: 183px; height: 47px; border-radius: 35px; opacity: 0;" class="sadu2"></div><div style="position: absolute; top: -1px; left: -1px; width: 185px; height: 49px; border-radius: 34px; opacity: 0;" class="sadd2"></div><div style="position: absolute; top: 0px; left: 0px; width: 183px; height: 47px; border-radius: 34px; color: rgb(255, 255, 255); opacity: 0.9;" class="nsi">&nbsp;Save Message&nbsp;</div></div></div></div>
+  
+</div>
+
+
+
+<div id="smh" style="opacity: 1; position: fixed; left: 0px; top: 0px; z-index: 21;">
+ <img id="cstx" class="nsi" border="0" draggable="false" width="225" height="36" style="position: fixed; bottom: 30px; opacity: 0.4; z-index: 50; display: none; right: 240px;">
+ 
+ <div id="fbh" style="position: fixed; bottom: 20px; z-index: 50; right: 30px;">
+  <a class="btn btnt" draggable="false" id="fb" style="width:80px; height:74px;" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fslither.io">
+   <img class="nsi" border="0" draggable="false" width="80" height="74" src="slither.io_files/facebook.png">
+  </a>
+ </div>
+ 
+ <div id="twth" style="position: fixed; bottom: 20px; z-index: 50; right: 130px;">
+  <a class="btn btnt" draggable="false" id="twt" style="width:80px; height:74px;" href="http://twitter.com/intent/tweet?status=Come%20and%20play%20http%3A%2F%2Fslither.io%20%23slitherio">
+   <img class="nsi" border="0" draggable="false" width="80" height="74" src="slither.io_files/twitter3.png">
+  </a>
+ </div>
+ 
+ 
+ <div id="cskh" style="position: fixed; left: 20px; bottom: 16px; z-index: 50; display: inline;">
+  <a class="btn btnt" draggable="false" id="csk" style="width:95px; height:89px;" href="#">
+   <img class="nsi" border="0" draggable="false" width="95" height="89" src="slither.io_files/changeskin2.png">
+  </a>
+ </div>
+ 
+ 
+ <div id="etcoh" style="position: fixed; right: 20px; top: 16px; z-index: 50; display: none;">
+  <a class="btn btnt" draggable="false" id="etco" style="width:87px; height:77px;" href="#">
+   <img class="nsi" border="0" draggable="false" width="87" height="77" src="slither.io_files/entercode4.png">
+  </a>
+ </div>
+ 
+ 
+ <div id="bskh" style="position: fixed; right: 20px; bottom: 16px; z-index: 50; display: none;">
+  <a class="btn btnt" draggable="false" id="bsk" style="width:102px; height:89px;" href="#">
+   <img class="nsi" border="0" draggable="false" width="102" height="89" src="slither.io_files/buildskin.png">
+  </a>
+ </div>
+ 
+ <div id="scosh" style="position: fixed; right: 14px; bottom: 144px; z-index: 50; display: none;">
+  <a class="btn btnt" draggable="false" id="scos" style="width:119px; height:87px;" href="#">
+   <img class="nsi" border="0" draggable="false" width="119" height="87" src="slither.io_files/selectcosmetic2.png">
+  </a>
+ </div>
+
+ 
+ <div id="grqh" style="position: fixed; right: 20px; top: 16px; z-index: 50;">
+  <a class="btn btnt" draggable="false" id="grq" style="width:90px; height:87px;" href="#">
+   <img id="grqi" class="nsi" border="0" draggable="false" width="90" height="87" src="slither.io_files/highquality.png">
+  </a>
+ </div>
+
+
+ <div id="plq" style="position: fixed; font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; font-size: 13px; color: #408040; right: 10px; top: 10px; width: 260px; height: 400px; text-align: right; display: none;">
+  <a class="lq" href="http://poal.me/klpijd" target="_blank"></a>
+ </div>
+
+
+ <div id="clq" style="position: fixed; font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; font-size: 12px; left: 510px; bottom: 10px; width: 260px; height: 20px; text-align: center; color: rgb(64, 72, 128);">
+  <a class="lq2" href="http://slither.io/privacy/" target="_blank">privacy</a> - <a class="lq2" href="http://slither.io/contact/" target="_blank">contact</a>
+ </div>
+
+</div>
+
+
+<div id="pskh" style="display: none; opacity: 0; position: fixed; z-index: 52; left: 276px; top: 314px;">
+ <a class="btn btnt" draggable="false" id="psk" style="width:87px; height:88px;" href="#">
+  <img class="nsi" border="0" draggable="false" width="87" height="88" src="slither.io_files/prev3.png">
+ </a>
+</div>
+
+<div id="nskh" style="display: none; opacity: 0; position: fixed; z-index: 52; left: 916px; top: 314px;">
+ <a class="btn btnt" draggable="false" id="nsk" style="width:87px; height:88px;" href="#">
+  <img class="nsi" border="0" draggable="false" width="87" height="88" src="slither.io_files/next3.png">
+ </a>
+</div>
+
+<div id="etcod" style="position: fixed; left: 0px; top: 0px; background: rgb(32, 40, 48); z-index: 53; display: none; opacity: 0; width: 1280px; height: 715px;">
+<div style="position: absolute; width: 800px; height: 32px; text-align: center; color: rgb(255, 255, 255); font-weight: bold; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 18px; left: 240px; top: 99px;" class="nsi">if you have a code, enter it here!</div><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 573px; top: 485px; transform: scale(0.476667);" draggable="false"></a><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 499px; top: 264px; transform: scale(0.476667);" draggable="false"></a><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 573px; top: 264px; transform: scale(0.476667);" draggable="false"></a><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 646px; top: 264px; transform: scale(0.476667);" draggable="false"></a><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 499px; top: 338px; transform: scale(0.476667);" draggable="false"></a><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 573px; top: 338px; transform: scale(0.476667);" draggable="false"></a><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 646px; top: 338px; transform: scale(0.476667);" draggable="false"></a><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 499px; top: 412px; transform: scale(0.476667);" draggable="false"></a><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 573px; top: 412px; transform: scale(0.476667);" draggable="false"></a><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 646px; top: 412px; transform: scale(0.476667);" draggable="false"></a><a draggable="false" href="#" class="btn btnt"><img width="135" height="135" class="nsi" style="position: absolute; opacity: 0; left: 646px; top: 485px; transform: scale(0.3575);" draggable="false"></a><div class="btnt nsi sadg1" style="position: fixed; width: 112px; color: rgb(255, 255, 255); font-weight: bold; text-align: center; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 20px; cursor: pointer; height: 47px; line-height: 47px; box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 20px; border-radius: 34px; z-index: 53; left: 640px; bottom: 61px;"><div style="position: absolute; opacity: 1; left: 0px; top: 0px;"><div style="position: absolute; top: 0px; left: 0px; width: 112px; height: 47px; border-radius: 35px; opacity: 0;" class="sadu1"></div><div style="position: absolute; top: -1px; left: -1px; width: 114px; height: 49px; border-radius: 34px; opacity: 0;" class="sadd1"></div><div style="position: absolute; top: 0px; left: 0px; width: 112px; height: 47px; border-radius: 34px; color: rgb(255, 255, 255); opacity: 0.9;" class="nsi">&nbsp;Cancel&nbsp;</div></div></div><img width="100" height="100" class="nsi" style="position: absolute; opacity: 0; left: 590px; top: 179px; transform: scale(0.476667) rotate(0deg);" draggable="false"><canvas style="position: absolute; left: 288px; top: 148px; transform: scale(0.953333);" width="705" height="67"></canvas></div>
+
+<script type="text/javascript">
+if (!window.console) window.console = {};
+if (!window.console.log) window.console.log = function (a) { };
+
+if (((window.location.href+'').toLowerCase()).indexOf('https:') == 0) {
+ window.location = 'http:'+window.location.href.substr(6);
+}
+
+var country = 'US'; // no!
+
+/*
+
+stop DDOSing me, lol
+
+window.onerror = function(message, url, lineNumber) {  
+  var ii = document.createElement('img');
+  ii.src = 'http://slither.io/error.jpg?m='+encodeURIComponent(message)+'&u='+encodeURIComponent(url)+'&ln='+encodeURIComponent(lineNumber);
+  return false;
+};
+*/
+
+function forceServer (a, b) {
+ sos = [];
+ forcing = true;
+ bso = {};
+ bso.ip = a;
+ bso.po = b;
+ bso.ac = 999;
+ sos.push(bso);
+}
+
+var rmsos = [];
+// rmsos.push( {a:[76,84,79, 445]} );
+
+var wsu = 0;
+</script>
+
+
+
+
+<script type="text/javascript">
+
+var xhrqs = [];
+
+
+function getDataHandler (xmlhttp) {
+ var o = null;
+ var cur_tm = Date.now();
+ for (var i = xhrqs.length-1; i>=0; i--) {
+  if (xhrqs[i].xmlhttp == xmlhttp) {
+   o = xhrqs[i];
+  } else if ((cur_tm - xhrqs[i].creation_tm) > 60000) { // clean up failed/hanged requests
+   xhrqs.splice(i, 1);
+  }
+ }
+ return o;
+}
+
+
+function removeDataHandler (xmlhttp) {
+ var cur_tm = Date.now();
+ for (var i = xhrqs.length-1; i>=0; i--) {
+  if (xhrqs[i].xmlhttp == xmlhttp) {
+   xhrqs.splice(i, 1); // remove the target handler
+  } else if ((cur_tm - xhrqs[i].creation_tm) > 60000) {
+   xhrqs.splice(i, 1); // clean up failed/hanged requests/handlers too, as long as we're here.
+  }
+ }
+}
+
+
+function getData (u, o) {
+ var xmlhttp;
+ 
+ if (window.XMLHttpRequest) {
+  xmlhttp = new XMLHttpRequest();
+ } else {
+  xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+ };
+
+ o.xmlhttp = xmlhttp;
+ o.done = false;
+ o.creation_tm = Date.now();
+ xhrqs.push(o);
+ 
+ xmlhttp.onreadystatechange = function () {
+  var o = getDataHandler(this);
+  if (o != null) {
+   if (this.readyState == 4 ) {
+    if (!o.done) {
+     o.done = true;
+     if (this.status == 200) {
+      o.f(this.responseText, 'success', o);
+     } else {
+      o.f('', 'error', o);
+     };
+     removeDataHandler(this);
+    };
+   };
+  };
+ };
+ 
+ xmlhttp.open('GET', u, true);
+ xmlhttp.send();
+};
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="slither.io_files/game832434.js"></script><canvas width="128" height="128" style="position: fixed; left: 576px; top: 293.5px; z-index: 8388607; display: none;"></canvas><div class="btnt nsi sadg1" style="position: fixed; width: 101px; color: rgb(255, 255, 255); font-weight: bold; text-align: center; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 20px; cursor: pointer; height: 47px; line-height: 47px; box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 20px; border-radius: 34px; z-index: 53; left: 578px; top: 478px; display: none; opacity: 0;"><div style="position: absolute; opacity: 1; left: 0px; top: 0px;"><div style="position: absolute; top: 0px; left: 0px; width: 101px; height: 47px; border-radius: 35px; opacity: 0;" class="sadu1"></div><div style="position: absolute; top: -1px; left: -1px; width: 103px; height: 49px; border-radius: 34px; opacity: 0;" class="sadd1"></div><div style="position: absolute; top: 0px; left: 0px; width: 101px; height: 47px; border-radius: 34px; color: rgb(255, 255, 255); opacity: 0.9;" class="nsi">&nbsp;Reset&nbsp;</div></div></div><div class="btnt nsi sadg1" style="position: fixed; width: 93px; color: rgb(255, 255, 255); font-weight: bold; text-align: center; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 20px; cursor: pointer; height: 47px; line-height: 47px; box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 20px; border-radius: 34px; z-index: 53; left: 640px; top: 478px; display: none; opacity: 0;"><div style="position: absolute; opacity: 1; left: 0px; top: 0px;"><div style="position: absolute; top: 0px; left: 0px; width: 93px; height: 47px; border-radius: 35px; opacity: 0;" class="sadu1"></div><div style="position: absolute; top: -1px; left: -1px; width: 95px; height: 49px; border-radius: 34px; opacity: 0;" class="sadd1"></div><div style="position: absolute; top: 0px; left: 0px; width: 93px; height: 47px; border-radius: 34px; color: rgb(255, 255, 255); opacity: 0.9;" class="nsi">&nbsp;Save&nbsp;</div></div></div><canvas style="position: fixed; left: -110px; top: -62px; z-index: 5; display: none; pointer-events: none; transform: scale(0.853222);" width="1500" height="838" class="nsi"></canvas><div class="nsi" style="position: fixed; right: 4px; top: 4px; text-align: center; width: 255px; height: 28px; color: rgb(255, 255, 255); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 21px; font-weight: bold; overflow: hidden; opacity: 0.85; z-index: 7; display: none; cursor: default; transform: translateZ(0px);">Leaderboard</div><div class="nsi" style="position: fixed; text-align: center; right: 4px; top: 32px; width: 50px; height: 800px; color: rgb(255, 255, 255); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 12px; overflow: hidden; opacity: 1; z-index: 7; display: none; cursor: default; line-height: 150%; transform: translateZ(0px);"></div><div class="nsi" style="position: fixed; text-align: left; white-space: nowrap; right: 64px; top: 32px; width: 150px; height: 800px; color: rgb(255, 255, 255); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 12px; overflow: hidden; opacity: 1; z-index: 8; display: none; cursor: default; line-height: 150%; transform: translateZ(0px);"></div><div class="nsi" style="position: fixed; text-align: right; right: 230px; top: 32px; width: 30px; height: 800px; color: rgb(255, 255, 255); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 12px; overflow: hidden; opacity: 1; z-index: 9; display: none; cursor: default; line-height: 150%; transform: translateZ(0px);"></div><div class="nsi" style="position: fixed; left: 8px; bottom: 4px; width: 200px; height: 37px; color: rgb(255, 255, 255); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 12px; overflow: hidden; opacity: 1; z-index: 7; display: none; cursor: default; line-height: 150%; transform: translateZ(0px);"></div><div class="nsi" style="position: fixed; left: 8px; top: 4px; width: 300px; height: 228px; color: rgb(255, 255, 255); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 13px; overflow: hidden; overflow-wrap: break-word; opacity: 1; z-index: 7; display: none; cursor: default; transform: translateZ(0px);"></div><div class="nsi" style="position: fixed; right: 16px; bottom: 16px; height: 104px; width: 104px; z-index: 10; display: none;"><img src="data:image/png;base64,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" class="nsi" style="position: absolute; left: 0px; top: 0px; opacity: 0.45; z-index: 11; transform: translateZ(0px);"><canvas width="80" height="80" class="nsi" style="position: absolute; top: 12px; left: 12px; z-index: 12; opacity: 0.25;"></canvas><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAuUlEQVQoU2NkIBMwkqmPgeoaDYAusQdiASDeCMQX0F2GzcYNfHx8/i4uLmC1e/bsYfj06dMCIDMRWTO6RgOgpvNLly5l0NLSAqu7cePG38jISGagZkNkm9E1NiQmJtbX1NSguKysrIxh7dq1hUDBCTAJqmkEO3XFihV/1dXVmUGmX79+nSEqKgrkT7xOBakFB46rqyvYVbt37wZpWghkJuALHJgcKDocoNGxgdjoQI8yrHyqpxyCtgIAjH88D7IZyjoAAAAASUVORK5CYII=" class="nsi" style="position: absolute; left: 0px; top: 0px; opacity: 1; z-index: 13; transform: translateZ(0px);"></div><iframe frameborder="0" style="position: fixed; left: 6px; top: 6px; border: 0px; z-index: 9999999; overflow: hidden;" width="251" height="150" src="slither.io_files/a.html"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+ 
+</body></html>
